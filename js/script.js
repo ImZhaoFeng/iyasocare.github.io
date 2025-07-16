@@ -446,7 +446,7 @@
     //   }
     // });
 	
-	//只针对zf-img-pup类的a
+	//只针对zf-img-pup类的a，做弹窗图片。
 	$('.zf-img-pup').magnificPopup({
 		type: 'image',
 		gallery:{
@@ -495,7 +495,7 @@
 
         preloader();
         sliderBgSetting();
-        robotoSlider();
+        // robotoSlider();  // 未定义函数
 
      });
 
