@@ -213,10 +213,8 @@ $(function(){
 				dataType: "json",
 				success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
 					zfLinkCheck = s.t;
-					console.log(s);
 				},
 				error: function(e){
-					console.log(e);
 				}
 			});
 		}
@@ -338,7 +336,6 @@ $(function(){
 				data: zfLiuyanData,
 				dataType: "json",
 				success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
-					console.log(s);
 					let code = s.lyr;
 					if (code == 1) {  // 留言成功
 						subSuccess();
@@ -349,7 +346,6 @@ $(function(){
 				},
 				error: function(e){ // 请求失败要执行的代码
 					zfSubErrorOpen(ef, 400);
-					console.log(e);
 				}
 			});
 			
@@ -566,7 +562,6 @@ $(function(){
 					data: zfLiuyanData,
 					dataType: "json",
 					success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
-						console.log(s);
 						let code = s.lyr;
 						if (code == 1) {  // 留言成功
 							zfsubSuccess();
@@ -577,7 +572,6 @@ $(function(){
 					},
 					error: function(e){ // 请求失败要执行的代码
 						zflySubErrorOpen(ef, 400);
-						console.log(e);
 					}
 				});
 				
@@ -626,24 +620,3 @@ $(function(){
 		}
 	}
 })
-
-
-
-
-
-
-
-// console.log('用户访问的域名' + visitDomain);
-// console.log('用户访问的页面' + visitPage);
-// console.log('页面位置' + visitPagePosition);
-// console.log('用户访问的完整链接' + visitUrl);
-// console.log('来源链接地址' + srcUrl);
-// console.log('来源平台' + srcPlatform);
-// console.log('用户的语言设置' + userLanguage);
-// console.log('用户的语言偏好列表' + userLanguages);
-// console.log('来源设备' + srcDevice);
-// console.log('来源系统' + srcOs);
-// console.log('来源浏览器类型' + srcBrowser);
-// console.log('来源搜素引擎' + srcEngine);
-// console.log('userAgent:' + userAgent);
-// console.log('userAgentJs:' + userAgentJs);
