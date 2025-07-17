@@ -8,20 +8,7 @@ function zfInsertFooter() {
 	`;
 	
 	
-	if (document.getElementById('zf-pro-footer-js')) {
-		if (document.getElementById('zf-pro-footer-js').innerHTML.trim() == '') {
-			fetch('../footer.html')
-				.then(response => response.text())
-				.then(html => {
-					document.getElementById('zf-pro-footer-js').innerHTML = html;
-				})
-				// .catch(() => {});
-				.catch(
-					// err => console.error('导航加载失败:', err);
-					document.getElementById('zf-pro-footer-js').innerHTML = footerHtml;
-				);
-		}
-	} else if (document.getElementById('zf-footer-js')) {
+	if (document.getElementById('zf-footer-js')) {
 		if (document.getElementById('zf-footer-js').innerHTML.trim() == '') {
 			fetch('footer.html')
 				.then(response => response.text())

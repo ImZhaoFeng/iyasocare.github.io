@@ -9,7 +9,6 @@ $(function(){
 			</div>
 		`;
 		
-		
 		if (document.getElementById('zf-footer-js')) {
 			fetch('footer.html')
 				.then(response => response.text())
@@ -21,28 +20,14 @@ $(function(){
 					document.getElementById('zf-footer-js').innerHTML = footerHtml;
 					liuLiangHeLiuyan();
 				});
-		} else if (document.getElementById('zf-pro-footer-js')) {
-			fetch('../footer.html')
-				.then(response => response.text())
-				.then(html => {
-					document.getElementById('zf-pro-footer-js').innerHTML = html;
-					liuLiangHeLiuyan();
-				})
-				.catch(() => {
-					document.getElementById('zf-pro-footer-js').innerHTML = footerHtml;
-					liuLiangHeLiuyan();
-				});
-		} 
+		}
 	}
 	
 	function checkIsNeedLoad() {
 		let isNeedLoad = false;
 		const footer = document.getElementById('zf-footer-js');
-		const footerPro = document.getElementById('zf-pro-footer-js');
 		if (footer) {
 			isNeedLoad = footer.innerHTML.trim() =='';
-		} else if (footerPro) {
-			isNeedLoad = footerPro.innerHTML.trim() == '';
 		}
 		isNeedLoad ? zfLoadFooter() : liuLiangHeLiuyan();
 		return isNeedLoad;
@@ -186,7 +171,6 @@ $(function(){
 		const ZF_ERR_TIP_TITLE = "ERROR:";
 		const ZF_ERR_TIP_TEXT = "Something Went Wrong, Please Try Again Later.";
 		const ZF_AJAX_URL = 'https://msg.iyasocare.cc:8008/user/ly';
-		// const ZF_AJAX_URL = 'http://127.0.0.1:50519/user/ly';
 		
 		let zfLinkCheck = '';  // 需要留言时传递到API
 		
