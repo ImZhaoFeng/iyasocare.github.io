@@ -15,13 +15,12 @@
     /*------------------------------------------
         = HIDE PRELOADER
     -------------------------------------------*/
+	preloader();
     function preloader() {
         if($('.preloader').length) {
             $('.preloader').delay(100).fadeOut(500, function() {
-
                 //active wow
-                wow.init();
-
+                // wow.init();
             });
         }
     }
@@ -76,9 +75,9 @@
             $(".hero-slider").slick({
                 autoplay: true,
                 autoplaySpeed: 8000,
-                arrows: false,
-                prevArrow: '<i class="icofont-brand-jaguar slick-prev"></i>',
-                nextArrow: '<i class="icofont-long-arrow-right slick-next"></i>',
+                arrows: true,
+                prevArrow: '<i class="icofont icofont-long-arrow-left zf-slick-prev"></i>',
+                nextArrow: '<i class="icofont icofont-long-arrow-right zf-slick-next"></i>',
                 dots: false,
                 fade: true,
                 cssEase: 'linear',
@@ -493,7 +492,8 @@
     ==========================================================================*/
     $(window).on('load', function() {
 
-        preloader();
+        // preloader(); // 欢迎页，如果加载完成后再执行，有可能出问题移到最上边执行，但是将wow.init()动画拿过来执行
+		wow.init();
         sliderBgSetting();
         // robotoSlider();  // 未定义函数
 
