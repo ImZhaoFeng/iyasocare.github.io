@@ -874,7 +874,7 @@ header {
 	background-image: url("../images/bg/lily.jpg");
 }
 .bg-img-2.mcl-2{
-	background-image: url("../images/bg/lily-2.png");
+	background-image: url("../images/bg/lily-2.jpg");
 }
 .bg-img-3 {
   background-image: url("../images/bg/about.jpg");
@@ -1236,8 +1236,7 @@ Roboto slider Style
   vertical-align: middle;
 }
 
-.hero .slick-prev,
-.hero .slick-next {
+.hero .slick-prev, .hero .slick-next {
   width: 55px;
   height: 55px;
   z-index: 10;
@@ -1249,14 +1248,17 @@ Roboto slider Style
   transition: all 0.3s;
 }
 
-.hero .slick-prev:hover,
-.hero .slick-next:hover {
+.hero .slick-prev:hover, .hero .slick-next:hover, 
+.hero .zf-slick-prev:hover, .hero .zf-slick-next:hover {
   opacity: 1;
+}
+.hero .zf-slick-prev:hover, .hero .zf-slick-next:hover {
+	font-size: 50px;
 }
 
 @media (max-width: 991px) {
-  .hero .slick-prev,
-  .hero .slick-next {
+  .hero .slick-prev, .hero .slick-next, 
+  .hero .zf-slick-prev, .hero .zf-slick-next {
     display: none !important;
   }
 }
@@ -1539,15 +1541,16 @@ Roboto slider Style
     background-color: #f22282 !important;
     color: #fff !important;
 }
-.hero .slick-prev {
+.hero .slick-prev, .hero .zf-slick-prev {
     left: 25px;
 }
 
-.hero .slick-next {
+.hero .slick-next, .hero .zf-slick-next {
     right: 25px;
 }
 
-.hero .slick-prev, .hero .slick-next {
+.hero .slick-prev, .hero .slick-next, 
+.hero .zf-slick-prev, .hero .zf-slick-next {
     width: 55px;
     height: 55px;
     z-index: 10;
@@ -1559,7 +1562,8 @@ Roboto slider Style
     transition: all 0.3s;
 }
 
-.slick-prev, .slick-next {
+.slick-prev, .slick-next, 
+.zf-slick-prev, .zf-slick-next{
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -1576,6 +1580,14 @@ Roboto slider Style
     border: none;
     outline: none;
     background: transparent;
+}
+.zf-slick-prev, .zf-slick-next{
+	font-size: 40px;
+	line-height: unset;
+	color: #ffffff88;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /*-------------------------------------------
