@@ -1379,7 +1379,7 @@ Roboto slider Style
 @media (max-width: 767px) {
   .hero-style-1, .hero-style-2 {
     min-height: 450px;
-    height: 100vh;
+    height: 50vh;
   }
 }
 
@@ -1446,7 +1446,7 @@ Roboto slider Style
 @media (max-width: 767px) {
   .hero-style-1 .slide, .hero-style-2 .slide {
     min-height: 450px;
-    height: 100vh;
+    height: 50vh;
   }
 }
 
@@ -4953,6 +4953,15 @@ Banner Style
     position: absolute;
     bottom: 10%;
 }
+@media (max-width:767px) {
+	.crumbs {
+		position: unset;
+		margin: 50px 0 0 ;
+	}
+}
+
+
+
 .crumbs.zf-normal {
 	position: unset;
 }
@@ -4970,6 +4979,7 @@ Banner Style
 
 .crumbs ul li {
     display: inline-block;
+	color: #eee;
 }
 
 .crumbs ul li a {
