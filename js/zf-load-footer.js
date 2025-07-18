@@ -15,11 +15,9 @@ function zfInsertFooter() {
 				.then(html => {
 					document.getElementById('zf-footer-js').innerHTML = html;
 				})
-				// .catch(() => {});
-				.catch(
-					// err => console.error('导航加载失败:', err);
+				.catch( err => {
 					document.getElementById('zf-footer-js').innerHTML = footerHtml;
-				);
+				});
 		}
 	}
 	
