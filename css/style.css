@@ -845,7 +845,7 @@ header {
 /*** background Img style ***/
 
 .bg-img {
-  background-image: url("../images/bg/bg-1.jpg");
+  background-image: url("../images/bg/old.jpg");
   position: relative;
   z-index: 1;
   background-attachment: fixed;
@@ -862,7 +862,7 @@ header {
 }
 
 .bg-img-2 {
-  background-image: url("../images/bg/bg-2.jpg");
+  background-image: url("../images/bg/old.jpg");
   position: relative;
   z-index: 1;
   background-attachment: fixed;
@@ -1818,6 +1818,14 @@ Appoinment Form Style
   width: 100%;
 }
 
+ 
+.zf-appoinment-form-page-contactus .zf-form.zf-leave-message input
+{
+  margin-bottom: 20px!important;
+  font-size: 14px!important;
+  height: 60px!important;
+}
+
 .appoinment-form .zf-leave-message input[type="tel"],
 .appoinment-form .zf-leave-message input[type="text"],
 .appoinment-form .zf-leave-message input[type="email"],
@@ -1899,6 +1907,11 @@ Appoinment Form Style
 .appoinment-form .zf-form.zf-leave-message textarea{
 	min-height: 120px;
 }
+.zf-appoinment-form-page-contactus .zf-form.zf-leave-message textarea {
+	min-height: 138px;
+}
+
+
 	
 .appoinment-form .zf-form textarea::-webkit-scrollbar { width: 4px; border-radius: 4px; }
 .appoinment-form .zf-form textarea::-webkit-scrollbar-track { background: #ffffff55; }
@@ -4490,6 +4503,15 @@ Footer Style
 }
 .zf-appoinment-form {
 	padding:20px;
+}
+.zf-appoinment-form-page-contactus {
+	padding: 45px 30px 33px;
+}
+.zf-appoinment-form-page-contactus input[disabled] {
+	background-color: #dddddd88!important;
+}
+.zf-appoinment-form-page-contactus input[disabled]::placeholder {
+	color: #99999999;
 }
 
 
@@ -7260,10 +7282,68 @@ header .sticky-on {
 	}
 }
 
+.zf-about-us-box-1 {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
 
+.zf-about-us-box-1 .zf-about-us-l, 
+.zf-about-us-box-1 .zf-about-us-r {
+	width: 100%;
+}
+.zf-about-us-l, .zf-about-us-l img {
+	user-select: none;
+	pointer-events: none;
+}
+.zf-about-us-box-1 .zf-about-us-r h2 {
+	margin: 0 ;
+	text-transform: uppercase;
+	color: #f22282;
+	font-size: 22px;
+}
+.zf-about-us-box-1 .zf-about-us-r h1 {
+	font-size: 20px;
+	margin: 6px 0;
+}
+.zf-about-us-box-1 .zf-about-us-r p {
+	padding: 0;
+	margin: 6px 0 0;
+	line-height: 20px;
+}
+@media (min-width: 1200px) {
+	.zf-about-us-box-1 .zf-about-us-r h2 {
+		font-size: 26px;
+	}
+	.zf-about-us-box-1 .zf-about-us-r h1 {
+		font-size: 22px;
+		margin: 10px 0;
+	}
+	.zf-about-us-box-1 .zf-about-us-r p {
+		margin: 10px 0 0;
+		line-height: 25px;
+	}
+}
 
-
-
+@media (max-width:992px) {
+	.zf-about-us-box-1 {
+		flex-wrap: wrap;
+	}
+	.zf-about-us-box-1 .zf-about-us-r h1 {
+		font-size: 22px;
+		margin: 16px 0;
+	}
+	.zf-about-us-box-1 .zf-about-us-r p {
+		margin: 16px 0 0;
+		line-height: 25px;
+	}
+	.zf-appoinment-form-page-contactus {
+		width: 100%;
+	}
+}
+img {
+	pointer-events: none;
+}
 /*--------------------------------------------------------------
  
 ----------------------------------------------------------------

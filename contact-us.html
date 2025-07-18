@@ -113,18 +113,18 @@
         <!-- Header end -->
 
         <!-- banner area start -->
-        <section class="banner-area parallax bg-img bg-img2" data-bg-image="images/bg/bg-2.jpg" data-speed="5">
+        <section class="banner-area parallax bg-img" data-bg-image="images/bg/old.jpg" data-speed="5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="banner-content">
-                            <h2><i class="icofont icofont-caret-left"></i>contact<i class="icofont icofont-caret-right"></i></h2>
-                            <h4>Meet our Letrol staff</h4>
+                            <h2>Contact Us</h2>
+                            <h4></h4>
                         </div>
                         <div class="crumbs">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li>contact</li>
                             </ul>
                         </div>
                     </div>
@@ -144,45 +144,72 @@
                                 <div class="s-list">
                                     <div class="icon"><i class="icofont icofont-social-google-map"></i></div>
                                     <ul>
-                                        <li>PO Box 16122 Collins Street West Victoria 8007 Canada</li>
+                                        <li>406, Xiyong Pilot Free Trade Zone, Shapingba District, Chongqing, China</li>
                                     </ul>
                                 </div>
                                 <div class="s-list">
                                     <div class="icon"><i class="icofont icofont-stock-mobile"></i></div>
                                     <ul>
-                                        <li>(+48) 1234-456-7890</li>
-                                        <li>(+48) 1234-456-7890</li>
+                                        <li>(+86) 023-65277561</li>
+                                        <li>(+48) 180-0338-6205</li>
                                     </ul>
                                 </div>
                                 <div class="s-list">
                                     <div class="icon"><i class="icofont icofont-envelope"></i></div>
                                     <ul>
-                                        <li>Supportinfo@yourinof.com</li>
-                                        <li>info@youraddress.com</li>
+                                        <li>sales@iyasocare.com</li>
+                                        <!-- <li>sales@iyasocare.com</li> -->
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="appoinment-form wpcf7">
+                        <div class="appoinment-form wpcf7 zf-appoinment-form zf-appoinment-form-page-contactus">
                             <h2>Mail us for Appointment</h2>
                             <div class="screen-reader-response"></div>
-                            <form action="http://uniquecx.com/.com/tf/html/Letrol-preview/Letrol/mail.php" method="post" id="default_contact_form">
+                            <div class="zf-form zf-leave-message">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="text" name="c_name" id="c_name" placeholder="Name here">
-                                        <input type="email" name="c_email" id="c_email" placeholder="Email here">
-                                        <input type="text" name="c_phone" id="c_phone" placeholder="Phone here">
-                                        <input type="text" name="c_address" id="c_address" placeholder="Address here">
+                                        <div class="zf-form-inputbox">
+											<input type="text" name="name" placeholder="Name here" id="zf-input-name" 
+											maxlength="50" autocomplete="off" title="Please enter your name" required>
+											<div class="zf-tip zf-input-name-tip"></div>
+										</div>
+										<div class="zf-form-inputbox">
+											<input type="email" name="email" placeholder="Email" id="zf-input-email" 
+											maxlength="50" autocomplete="off" title="Please enter your email" required>
+											<div class="zf-tip zf-input-email-tip"></div>
+										</div>
+                                        <div class="zf-form-inputbox">
+											<input type="tel" name="tel" placeholder="Phone Number" id="zf-input-tel" 
+											maxlength="20" autocomplete="off" title="Please enter your phone Number">
+											<div class="zf-tip zf-input-tel-tip"></div>
+										</div>
+										<div class="zf-form-inputbox">
+											 <input type="text" name="address" placeholder="Address here"  id="zf-input-address" disabled>
+											 <div class="zf-tip zf-input-address-tip"></div>
+										</div>
+                                       
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="c_subject" id="c_subject" placeholder="Subject here">
-                                        <textarea name="q_msg" id="c_msg" placeholder="Message here"></textarea>
-                                        <input type="submit" value="send message" id="c_submit">
+										<div class="zf-form-inputbox">
+											<input type="text" name="subject" placeholder="Subject here" id="zf-input-subject" disabled>
+											<div class="zf-tip zf-input-subject-tip"></div>
+										</div>
+										<div class="zf-form-inputbox">
+											<textarea name="message" placeholder="Message" id="zf-input-message" maxlength="1000" autocomplete="off"></textarea>
+											<div class="zf-tip zf-input-message-tip"></div>
+										</div>
+										<input type="submit" name="submit" value="send message" id="zf-input-sub-msg">
+										<!-- 留言成功提示 开始 -->
+										<div class="zf-msg-success zf-none zf-ajax-loader">
+											<div class="zf-msg-success-tip"></div>
+										</div>
+										<!-- 留言成功提示 结束 -->
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
