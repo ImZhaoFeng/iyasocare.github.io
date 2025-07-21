@@ -169,31 +169,31 @@ $(function(){
 		}
 		
 		const ZF_ERR_TIP_TITLE = "ERROR:";
-		const ZF_ERR_TIP_TEXT = "Something Went Wrong, Please Try Again Later.";
+		const ZF_ERR_TIP_TEXT = "Something went wrong, possibly due to server or network issues. Please try again later or contact us.";
 		const ZF_AJAX_URL = 'https://msg.iyasocare.cc:8008/user/ly';
 		
-		let zfLinkCheck = '';  // 需要留言时传递到API
+		let zfLinkCheck = '';  
 		
 		const zfLiuLiangData = {
-			'visitDomain': visitDomain,  // 用户访问的域名
-			'visitPage': visitPage,  //用户访问的页面
-			'visitPagePosition': visitPagePosition, // 页面位置
-			'visitUrl': visitUrl, // 用户访问的完整链接
+			'visitDomain': visitDomain,  
+			'visitPage': visitPage, 
+			'visitPagePosition': visitPagePosition, 
+			'visitUrl': visitUrl, 
 			
-			'srcUrl': srcUrl, // 来源链接地址
-			'srcDomain' : srcDomain, // 来源链接的域名
-			'srcPlatform': srcPlatform, // 来源平台
+			'srcUrl': srcUrl, 
+			'srcDomain' : srcDomain, 
+			'srcPlatform': srcPlatform, 
 			
-			'userLanguage': userLanguage, // 用户的语言设置
-			'userLanguages':  userLanguages,  // 用户的语言偏好列表
+			'userLanguage': userLanguage, 
+			'userLanguages':  userLanguages,  
 			
-			'srcEngine': srcEngine,  // 来源搜素引擎
-			'srcDevice': srcDevice,  // 来源设备
-			'srcOs': srcOs,  // 来源系统
+			'srcEngine': srcEngine, 
+			'srcDevice': srcDevice,  
+			'srcOs': srcOs, 
 			
-			'userAgentJs': userAgentJs,  // userAgentJs
-			// 'userAgent': userAgent,  // userAgent就是将userAgentJs转为了小写
-			'srcBrowser': srcBrowser,  // 来源浏览器类型
+			'userAgentJs': userAgentJs,
+			// 'userAgent': userAgent,
+			'srcBrowser': srcBrowser, 
 			
 			'isLiuLiang': true, 
 		};
@@ -201,18 +201,15 @@ $(function(){
 		zfLiuLiangSubmit();
 		function zfLiuLiangSubmit() {
 			$.ajax({
-				type: "POST",  // Ajax请求方式
-				url: ZF_AJAX_URL,  // 需要请求的服务器地址
+				type: "POST", 
+				url: ZF_AJAX_URL, 
 				xhrFields: {
-					withCredentials: true  // 允许跨域请求时携带cookie
+					withCredentials: true  
 				},
 				data: zfLiuLiangData,
 				dataType: "json",
-				success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
-					zfLinkCheck = s.t;
-				},
-				error: function(e){
-				}
+				success: function(s){zfLinkCheck = s.t;},
+				error: function(e){}
 			});
 		}
 		
@@ -272,31 +269,22 @@ $(function(){
 			zfUserMessageTip.text(tip);
 		}
 		
-		// 1. 姓名验证：允许中文、英文、空格，1-50字符
 		zfUserName.on('input',function(){
 			userNameInput();
 		});
-		
-		// 2. 电话验证：允许数字、+、-、空格，最长20字符（非必填，可以为空）
 		zfUserTel.on('input',function(){
 			userTelInput();
 		});
-		
-		// 3. 邮箱验证：常规邮箱格式，最长50字符，不允许为空
 		zfUserEmail.on('blur',function(){
 			userEmailInput();
 		});
-		
-		// 4. 消息验证：最多1000字符，允许为空
 		zfUserMessage.on('blur',function(){
 			userMessageInput();
 		});
 			
 			
-		// zfLiuyan提交成功后执行
 		function subSuccess() {
 			zfSuccess.removeClass('zf-ajax-loader');
-			
 			zfsuccessTip.html(zfsuccessTipHtml);
 			zfUserName.val('');
 			zfUserTel.val('');
@@ -304,18 +292,16 @@ $(function(){
 			zfUserMessage.val('');
 		};
 		
-		
-		// 提交执行
+
 		function zfLiuyan() {  
 			zfSuccess.removeClass('zf-none');
-			let zfUserData = {  // 发送到服务器数据
+			let zfUserData = { 
 				'userName': zfUserName.val().trim(),
 				'userTel': zfUserTel.val().trim(),
 				'userEmail': zfUserEmail.val().trim(),
 				'userMessage': zfUserMessage.val().trim(),
 				'zfLinkCheck': zfLinkCheck,
 			};
-			
 			let zfLiuyanData = {
 				...zfUserData,
 				...zfLiuLiangData
@@ -324,24 +310,24 @@ $(function(){
 			delete zfLiuyanData.srcDomain;
 			
 			let ef = 'EB';
-			$.ajax({ // $.ajax()是一个方法,接受一个对象
-				type: "POST",  // Ajax请求方式
-				url: ZF_AJAX_URL,  // 需要请求的服务器地址
+			$.ajax({
+				type: "POST",
+				url: ZF_AJAX_URL,
 				xhrFields: {
-					withCredentials: true  // 允许跨域请求时携带cookie
+					withCredentials: true
 				},
 				data: zfLiuyanData,
 				dataType: "json",
-				success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
+				success: function(s){ 
 					let code = s.lyr;
-					if (code == 1) {  // 留言成功
+					if (code == 1) {  
 						subSuccess();
 					} else {
 						let time = s.lyt;
 						zfSubErrorOpen(ef, code, time);
 					}
 				},
-				error: function(e){ // 请求失败要执行的代码
+				error: function(e){
 					zfSubErrorOpen(ef, 400);
 				}
 			});
@@ -349,7 +335,7 @@ $(function(){
 		};
 		
 		function zfSubmit() {
-			let ef = 'FB';  // 前端 
+			let ef = 'FB';
 			formIsValid = true;
 			userNameInput();
 			userTelInput();
@@ -357,68 +343,50 @@ $(function(){
 			userMessageInput();
 			if (zfLinkCheck.trim() && formIsValid) {
 				zfLiuyan();
-			} else if (!zfLinkCheck.trim() && !formIsValid) {  // 2 输入未完成 & 页面加载服务器有问题
+			} else if (!zfLinkCheck.trim() && !formIsValid) {  
 				zfSubErrorOpen(ef, 2);
 			} else { 
-				if (!formIsValid) {  // 0 输入未完成
+				if (!formIsValid) {
 					zfSubErrorOpen(ef, 0);
-				} else {  // 1 页面加载服务器有问题
+				} else {  
 					zfSubErrorOpen(ef, 1);
 				}
 			}
 		};
 		
-		// 给按钮添加单击事件
 		$('#zf-footer-button').on('click', function(event){ 
 			event.preventDefault();
 			zfSubmit();
 		});
 		
-		// 打开错误提示窗，同时关闭提交遮罩。新版
 		function zfSubErrorOpen(ef, code, time = 0) {
 			zfSubError.removeClass('zf-none');
 			zfSuccess.addClass('zf-none');
 			let t = (ZF_ERR_ARR?.[ef]?.[code]?.t ?? ZF_ERR_TIP_TITLE) + '(Err code:' + ((ef == 'FB') ? '0' : '1') + '-' + code + ')';
 			let c = ZF_ERR_ARR?.[ef]?.[code]?.c ?? ZF_ERR_TIP_TEXT;
 			if (Array.isArray(c)) {c = c.join('\n');}
-			if (Number(time) > 0) { // time = String(time);
-				c = c.replace(/\{zfEbSleepTime\}/g, time);  // 用time替换掉原字符串中的占位符{zfEbSleepTime}，花括号需要转义，所以是\{zfEbSleepTime\}，
+			if (Number(time) > 0) {
+				c = c.replace(/\{zfEbSleepTime\}/g, time);  
 			}
 			zfSubErrorTipTitle.text(t);
 			zfSubErrorTip.text(c);
 		}
 		
-		// 关闭提示
 		zfSubErrorTipClose.click(function(){
 			zfSubError.addClass('zf-none');
 			zfSubErrorTipTitle.text('');
 			zfSubErrorTip.text('');
 		});
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面// 留言页面
+//*****************************MSG*****************************//
+
 		if (document.querySelector('.zf-leave-message')) {
 			zfLeaveMsg(zfLiuLiangData);
 		}
 		function zfLeaveMsg(zfData) {
 			
 			const fromBox = $('.zf-leave-message');
-			zfData.visitPagePosition = fromBox.data('zf-position'); // 页面位置 visit_page_position
+			zfData.visitPagePosition = fromBox.data('zf-position');
 			
 			const lyzfUserName = fromBox.find('#zf-input-name');
 			const lyzfUserTel = fromBox.find('#zf-input-tel');
@@ -431,14 +399,14 @@ $(function(){
 			const lyzfUserEmailTip = fromBox.find('.zf-input-email-tip');
 			const lyzfUserMessageTip = fromBox.find('.zf-input-message-tip');
 			
-			const lyzfSuccess = fromBox.find('.zf-msg-success'); // 提交成功的div
-			const lyzfSuccessTip = fromBox.find('.zf-msg-success-tip'); // 提交成功的div内部提示语div
+			const lyzfSuccess = fromBox.find('.zf-msg-success'); 
+			const lyzfSuccessTip = fromBox.find('.zf-msg-success-tip'); 
 			const lyzfSuccessTipHtml = '<i class="flaticon-zfsuccess"></i><div>Thank you for your submission. We will respond to you at the earliest opportunity.</div>';
 			
-			const zfSubError = $('.zf-sub-error');  // 提交失败提示框
-			const zfSubErrorTipClose = zfSubError.find('.zf-sub-error-tip-close');  // 关闭提示
-			const zfSubErrorTip = zfSubError.find('.zf-sub-error-tip');  // 错误提示
-			const zfSubErrorTipTitle = zfSubError.find('.zf-sub-error-tip-title'); // 错误提示-title
+			const zfSubError = $('.zf-sub-error'); 
+			const zfSubErrorTipClose = zfSubError.find('.zf-sub-error-tip-close');  
+			const zfSubErrorTip = zfSubError.find('.zf-sub-error-tip');  
+			const zfSubErrorTipTitle = zfSubError.find('.zf-sub-error-tip-title'); 
 			
 			let zflyformIsValid = false;
 
@@ -497,29 +465,20 @@ $(function(){
 				}
 				lyzfUserMessageTip.text(tip);
 			}
-			
-			// 1. 姓名验证：允许中文、英文、空格，1-50字符
+
 			lyzfUserName.on('input',function(){
 				zfuserNameInput();
 			});
-			
-			// 2. 电话验证：允许数字、+、-、空格，最长20字符（非必填，可以为空）
 			lyzfUserTel.on('input',function(){
 				zfuserTelInput();
 			});
-			
-			// 3. 邮箱验证：常规邮箱格式，最长50字符，不允许为空
 			lyzfUserEmail.on('blur',function(){
 				zfuserEmailInput();
 			});
-			
-			// 4. 消息验证：最多1000字符，允许为空
 			lyzfUserMessage.on('blur',function(){
 				zfuserMessageInput();
 			});
-				
-				
-			// zfLiuyan提交成功后执行
+			
 			function zfsubSuccess() {
 				lyzfSuccess.removeClass('zf-ajax-loader');
 				
@@ -531,17 +490,15 @@ $(function(){
 			};
 			
 			
-			// 提交执行
 			function zfLiuyanSub() {  
 				lyzfSuccess.removeClass('zf-none');
-				let zfUserData = {  // 发送到服务器数据
+				let zfUserData = {  
 					'userName': lyzfUserName.val().trim(),
 					'userTel': lyzfUserTel.val().trim(),
 					'userEmail': lyzfUserEmail.val().trim(),
 					'userMessage': lyzfUserMessage.val().trim(),
 					'zfLinkCheck': zfLinkCheck,
 				};
-				
 				let zfLiuyanData = {
 					...zfUserData,
 					...zfData,
@@ -550,32 +507,31 @@ $(function(){
 				delete zfLiuyanData.srcDomain;
 				
 				let ef = 'EB';
-				$.ajax({ // $.ajax()是一个方法,接受一个对象
-					type: "POST",  // Ajax请求方式
-					url: ZF_AJAX_URL,  // 需要请求的服务器地址
+				$.ajax({ 
+					type: "POST",  
+					url: ZF_AJAX_URL, 
 					xhrFields: {
-						withCredentials: true  // 允许跨域请求时携带cookie
+						withCredentials: true  
 					},
 					data: zfLiuyanData,
 					dataType: "json",
-					success: function(s){ // 请求成功要执行的代码 // 参数：是从服务器返回的数据
+					success: function(s){ 
 						let code = s.lyr;
-						if (code == 1) {  // 留言成功
+						if (code == 1) { 
 							zfsubSuccess();
 						} else {
 							let time = s.lyt;
 							zflySubErrorOpen(ef, code, time);
 						}
 					},
-					error: function(e){ // 请求失败要执行的代码
+					error: function(e){ 
 						zflySubErrorOpen(ef, 400);
 					}
 				});
-				
 			};
 			
 			function zfSubmitGo() {
-				let ef = 'FB';  // 前端 
+				let ef = 'FB';  
 				zflyformIsValid = true;
 				zfuserNameInput();
 				zfuserTelInput();
@@ -583,37 +539,32 @@ $(function(){
 				zfuserMessageInput();
 				if (zfLinkCheck.trim() && zflyformIsValid) {
 					zfLiuyanSub();
-				} else if (!zfLinkCheck.trim() && !zflyformIsValid) {  // 2 输入未完成 & 页面加载服务器有问题
+				} else if (!zfLinkCheck.trim() && !zflyformIsValid) {  
 					zflySubErrorOpen(ef, 2);
 				} else { 
-					if (!zflyformIsValid) {  // 0 输入未完成
+					if (!zflyformIsValid) { 
 						zflySubErrorOpen(ef, 0);
-					} else {  // 1 页面加载服务器有问题
+					} else { 
 						zflySubErrorOpen(ef, 1);
 					}
 				}
 			};
 			
-			// 给按钮添加单击事件
 			lyzfSubMessage.on('click', function(event){ 
 				event.preventDefault();
 				zfSubmitGo();
 			});
 			
-			// 打开错误提示窗，同时关闭提交遮罩
 			function zflySubErrorOpen(ef, code, time = 0) {
 				zfSubError.removeClass('zf-none');
 				lyzfSuccess.addClass('zf-none');
 				let t = (ZF_ERR_ARR?.[ef]?.[code]?.t ?? ZF_ERR_TIP_TITLE) + ' (Err code:' + ((ef == 'FB') ? '0' : '1') + '-' + code + ')';
 				let c = ZF_ERR_ARR?.[ef]?.[code]?.c ?? ZF_ERR_TIP_TEXT;
 				if (Array.isArray(c)) {c = c.join('\n');}
-				if (Number(time) > 0) { // time = String(time);
-					c = c.replace(/\{zfEbSleepTime\}/g, time);  // 用time替换掉原字符串中的占位符{zfEbSleepTime}，花括号需要转义，所以是\{zfEbSleepTime\}，
-				}
+				if (Number(time) > 0) {c = c.replace(/\{zfEbSleepTime\}/g, time);}
 				zfSubErrorTipTitle.text(t);
 				zfSubErrorTip.text(c);
 			}
-			
 		}
 	}
 })
