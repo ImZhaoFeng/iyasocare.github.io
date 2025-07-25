@@ -1,4 +1,4 @@
-$(function() {
+function loadProducts() {
 	let currentPage = 1;
 	const itemsPerPage = 6;
 	let productsData = [];
@@ -134,7 +134,8 @@ $(function() {
 		}
 	});
 	
-});
+}
+loadProducts();
 
 
 /*

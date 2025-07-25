@@ -3484,6 +3484,23 @@ Gallery Style
     font-weight: 600;
 }
 
+.gallery-item.zf-gallery-item:before {
+	display: none;
+}
+.gallery-item.zf-gallery-item a {
+	display: block;
+	overflow: hidden;
+}
+.gallery-item.zf-gallery-item a img {
+	transition: 350ms;
+}
+.gallery-item.zf-gallery-item a:hover img {
+	transform: scale(1.1);
+}
+.gallery-item.zf-gallery-item a:hover {
+	/* box-shadow: 0 0 0 10px #999999; */
+}
+
 .zf-fontsize-16 {
 	font-size: 16px;
 }
@@ -7282,68 +7299,146 @@ header .sticky-on {
 	}
 }
 
-.zf-about-us-box-1 {
-	display: flex;
-	gap: 20px;
-	align-items: center;
+
+.zf-about-section-a, .zf-about-container-a, .zf-about-section-a .zf-about-us-a-top {
+	position: relative;
 }
 
-.zf-about-us-box-1 .zf-about-us-l, 
-.zf-about-us-box-1 .zf-about-us-r {
-	width: 100%;
+.zf-about-section-a::before, .zf-about-section-a::after,
+.zf-about-container-a::before, .zf-about-container-a::after
+{
+	content: "";
+	z-index: -3;
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	top: 0;
 }
-.zf-about-us-l, .zf-about-us-l img {
-	user-select: none;
-	pointer-events: none;
+.zf-about-container-a::before, .zf-about-container-a::after {
+	z-index: -1;
 }
-.zf-about-us-box-1 .zf-about-us-r h2 {
-	margin: 0 ;
-	text-transform: uppercase;
+.zf-about-section-a::before {
+	background-color: #f2f2f2;
+	left: 0;
+}
+.zf-about-section-a::after {
+	background-color: #1f3d9d88;
+	right: 0;
+/* 	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; */
+}
+
+.zf-about-container-a::before {
+	left: 0;
+	background-color: #1f3d9d33;
+	background-image: url('../images/about/aboutus-iyasocare.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	opacity: 0.8;
+	/* 可以删除 */
+}
+
+.zf-about-container-a::after {
+	background-color: #f2f2f2;
+	right: 0;
+}
+.zf-about-container-a {
+	box-shadow: 0 0 10px 0 #99999999;
+}
+
+.zf-about-us-a-box {
+	display: flex;
+}
+.zf-about-us-a-box .zf-about-us-a-l, .zf-about-us-a-box .zf-about-us-a-r {
+	width: 100%
+	
+}
+.zf-about-us-a-box .zf-about-us-a-r-content {
+	padding: 20px 0 20px 20px;
+}
+.zf-about-us-a-box .zf-about-us-a-r-content h2 {
+	font-size: 30px;
 	color: #f22282;
-	font-size: 22px;
 }
-.zf-about-us-box-1 .zf-about-us-r h1 {
-	font-size: 20px;
-	margin: 6px 0;
+.zf-about-us-a-box .zf-about-us-a-r-content h1 {
+	font-size: 26px;
 }
-.zf-about-us-box-1 .zf-about-us-r p {
-	padding: 0;
-	margin: 6px 0 0;
-	line-height: 20px;
+.zf-about-us-a-box .zf-about-us-a-r-content p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #555;
+	font-weight: 100;
 }
+.zf-about-us-a-box .zf-about-us-a-r-content ul {
+	list-style-position: inside;
+	list-style: ‌disc;
+	padding: 0 0 10px 20px;
+}
+.zf-about-section-a-bgimg {
+	display: none;
+}
+
+
+
+
+
+.zf-about-section-b .zf-about-us-b-box h2 {
+	font-size: 30px;
+	color: #f22282;
+	text-align: center;
+}
+.zf-about-section-b .zf-about-us-b-box h1 {
+	font-size: 28px;
+	text-align: center;
+}
+.zf-about-section-b .zf-about-us-b-content {
+	padding: 20px 0 ;
+}
+.zf-about-section-b .zf-about-us-b-box p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #555;
+	font-weight: 100;
+}
+
 @media (min-width: 1200px) {
-	.zf-about-us-box-1 .zf-about-us-r h2 {
-		font-size: 26px;
-	}
-	.zf-about-us-box-1 .zf-about-us-r h1 {
-		font-size: 22px;
-		margin: 10px 0;
-	}
-	.zf-about-us-box-1 .zf-about-us-r p {
-		margin: 10px 0 0;
-		line-height: 25px;
-	}
+	
 }
 
 @media (max-width:992px) {
-	.zf-about-us-box-1 {
-		flex-wrap: wrap;
+	.zf-about-section-a {
+		background-color: #eee;
 	}
-	.zf-about-us-box-1 .zf-about-us-r h1 {
-		font-size: 22px;
-		margin: 16px 0;
+	.zf-about-us-a-box {
+		display: block;
 	}
-	.zf-about-us-box-1 .zf-about-us-r p {
-		margin: 16px 0 0;
-		line-height: 25px;
+	
+	.zf-about-section-a::before, .zf-about-section-a::after, .zf-about-container-a::before, .zf-about-container-a::after 
+	{
+		display: none;
 	}
-	.zf-appoinment-form-page-contactus {
-		width: 100%;
+	.zf-about-section-a-bgimg {
+		display: flex;
+		justify-content: center;
+		opacity: 0.8;
+	}
+	.zf-about-container-a {
+		box-shadow: 0 0 0 0 #99999900;
+	}
+	.zf-about-us-a-box .zf-about-us-a-r-content {
+		padding: 0;
 	}
 }
+
 img {
 	pointer-events: none;
 }
+
+
+
+
 /*--------------------------------------------------------------
  
 ----------------------------------------------------------------
