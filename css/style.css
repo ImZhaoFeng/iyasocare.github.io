@@ -6685,7 +6685,11 @@ header .sticky-on {
 	transition: background-size 400ms;
 }
 
-.zf-underline-lr:hover, .container-zf-product:hover .zf-underline-lr, .zf-pro-title ul li:hover span
+.zf-underline-lr:hover, 
+.zf-underline-lr-ul li:hover, 
+.zf-underline-lr-span li:hover span, 
+.container-zf-product:hover .zf-underline-lr, 
+.zf-pro-title ul li:hover span
 {
 	background-position-x: left;
 	background-size: 100% 2px;
@@ -7300,144 +7304,137 @@ header .sticky-on {
 }
 
 
-.zf-about-section-a, .zf-about-container-a, .zf-about-section-a .zf-about-us-a-top {
-	position: relative;
-}
-
-.zf-about-section-a::before, .zf-about-section-a::after,
-.zf-about-container-a::before, .zf-about-container-a::after
-{
-	content: "";
-	z-index: -3;
-	display: block;
-	position: absolute;
-	height: 100%;
-	width: 50%;
-	top: 0;
-}
-.zf-about-container-a::before, .zf-about-container-a::after {
-	z-index: -1;
-}
-.zf-about-section-a::before {
-	background-color: #f2f2f2;
-	left: 0;
-}
-.zf-about-section-a::after {
-	background-color: #1f3d9d88;
-	right: 0;
-/* 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
-}
-
-.zf-about-container-a::before {
-	left: 0;
-	background-color: #1f3d9d33;
-	background-image: url('../images/about/aboutus-iyasocare.jpg');
-	background-size: cover;
-	background-position: 50% 50%;
-	opacity: 0.8;
-	/* 可以删除 */
-}
-
-.zf-about-container-a::after {
-	background-color: #f2f2f2;
-	right: 0;
-}
-.zf-about-container-a {
-	box-shadow: 0 0 10px 0 #99999999;
-}
-
-.zf-about-us-a-box {
-	display: flex;
-}
-.zf-about-us-a-box .zf-about-us-a-l, .zf-about-us-a-box .zf-about-us-a-r {
-	width: 100%
-	
-}
-.zf-about-us-a-box .zf-about-us-a-r-content {
-	padding: 20px 0 20px 20px;
-}
-.zf-about-us-a-box .zf-about-us-a-r-content h2 {
-	font-size: 30px;
-	color: #f22282;
-}
-.zf-about-us-a-box .zf-about-us-a-r-content h1 {
-	font-size: 26px;
-}
-.zf-about-us-a-box .zf-about-us-a-r-content p {
-	font-size: 16px;
-	line-height: 30px;
-	color: #555;
-	font-weight: 100;
-}
-.zf-about-us-a-box .zf-about-us-a-r-content ul {
-	list-style-position: inside;
-	list-style: ‌disc;
-	padding: 0 0 10px 20px;
-}
-.zf-about-section-a-bgimg {
-	display: none;
-}
 
 
 
 
 
+
+
+
+
+
+.zf-about-section-b {
+	padding: 80px 0;
+}
 .zf-about-section-b .zf-about-us-b-box h2 {
 	font-size: 30px;
 	color: #f22282;
 	text-align: center;
+	margin: 0;
 }
 .zf-about-section-b .zf-about-us-b-box h1 {
 	font-size: 28px;
 	text-align: center;
+	margin: 20px 0;
 }
 .zf-about-section-b .zf-about-us-b-content {
-	padding: 20px 0 ;
+	padding: 0;
 }
 .zf-about-section-b .zf-about-us-b-box p {
 	font-size: 16px;
 	line-height: 30px;
 	color: #555;
 	font-weight: 100;
+
 }
 
-@media (min-width: 1200px) {
-	
+.zf-about-section-b .zf-about-us-b-box p:last-child {
+	margin: 0;
 }
 
-@media (max-width:992px) {
-	.zf-about-section-a {
-		background-color: #eee;
-	}
-	.zf-about-us-a-box {
-		display: block;
-	}
-	
-	.zf-about-section-a::before, .zf-about-section-a::after, .zf-about-container-a::before, .zf-about-container-a::after 
-	{
-		display: none;
-	}
-	.zf-about-section-a-bgimg {
-		display: flex;
-		justify-content: center;
-		opacity: 0.8;
-	}
-	.zf-about-container-a {
-		box-shadow: 0 0 0 0 #99999900;
-	}
-	.zf-about-us-a-box .zf-about-us-a-r-content {
-		padding: 0;
-	}
-}
 
 img {
 	pointer-events: none;
 }
 
 
+.zf-about-section-c {
+	position: relative;
+}
+.zf-about-section-c::before, .zf-about-section-c::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.zf-about-section-c::before {
+	background-image: url('../images/about/aboutus-iyasocare-1.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	z-index: -6;
+}
+.zf-about-section-c::after {
+	background: #1f3d9d;
+	z-index: -5;
+	opacity: 0.88;
+}
+.zf-about-container-c .zf-about-us-c-box {
+	display: flex;
+	margin: 20px 0;
+}
+.zf-about-container-c .zf-about-us-c-l, .zf-about-container-c .zf-about-us-c-r {
+	width: 100%;
+}
 
+
+.zf-about-container-c .zf-about-us-c-l img {
+	object-fit: cover;
+	min-width: 100%;
+	min-height: 100%;
+	border-radius: 10px;
+}
+.zf-about-container-c .zf-about-us-c-r {
+	padding: 0 0 0 10px;
+	display: flex;
+	align-items: center;
+}
+.zf-about-container-c .zf-about-us-c-r-content h1 {
+	font-size: 26px;
+	color: #fff;
+	
+}
+.zf-about-container-c .zf-about-us-c-r-content h2 {
+	font-size: 30px;
+	color: #f22282;
+	margin: 0;
+}
+.zf-about-container-c .zf-about-us-c-r-content > div > p {
+	padding: 0;
+	margin: 5px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #eee;
+	font-weight: 100;
+	/* text-indent: 1em; */
+}
+.zf-about-container-c .zf-about-us-c-r-content > div > ul{
+	padding:10px 0 10px 20px;
+	list-style: disc;
+	list-style-position: inside;
+}
+.zf-about-container-c .zf-about-us-c-r-content > div > ul > li {
+	color: #ddd;
+	
+}
+@media (min-width: 1200px) {
+	
+}
+
+@media (max-width:992px) {
+	.zf-about-container-c .zf-about-us-c-box {
+		flex-wrap: wrap;
+		gap:20px;
+		margin: 0;
+	}
+	.zf-about-container-c .zf-about-us-c-r {
+		padding: 0;
+		display: block;
+	}
+}
 
 /*--------------------------------------------------------------
  
