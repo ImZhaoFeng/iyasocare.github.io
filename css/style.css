@@ -7356,7 +7356,7 @@ img {
 	content: '';
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -7366,15 +7366,18 @@ img {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	z-index: -6;
+	filter: blur(1px);
 }
 .zf-about-section-c::after {
-	background: #1f3d9d;
+	/* background: #1f3d9d; */
+	background: #000033;
+	/* width: 100%; */
 	z-index: -5;
-	opacity: 0.88;
+	opacity: 0.5;
 }
 .zf-about-container-c .zf-about-us-c-box {
 	display: flex;
-	margin: 20px 0;
+	margin: 20px 0 30px;
 }
 .zf-about-container-c .zf-about-us-c-l, .zf-about-container-c .zf-about-us-c-r {
 	width: 100%;
@@ -7392,12 +7395,12 @@ img {
 	display: flex;
 	align-items: center;
 }
-.zf-about-container-c .zf-about-us-c-r-content h1 {
+.zf-about-container-c .zf-about-us-c-r-content h2 {
 	font-size: 26px;
 	color: #fff;
 	
 }
-.zf-about-container-c .zf-about-us-c-r-content h2 {
+.zf-about-container-c .zf-about-us-c-r-content h3 {
 	font-size: 30px;
 	color: #f22282;
 	margin: 0;
@@ -7420,8 +7423,109 @@ img {
 	color: #ddd;
 	
 }
-@media (min-width: 1200px) {
+
+/* e s */
+.zf-about-section-e .zf-about-us-e-title {
+	transform: translateY(-20px);
+}
+.zf-about-section-e .zf-about-us-e-title h2, 
+.zf-about-section-e .zf-about-us-e-title h3
+{
+	text-align: center;
+	color: #f22282;
+}
+.zf-about-section-e .zf-about-us-e-title h2 {
+	padding: 0;
+	margin: 0;
+	color: #1f3d9d;
+}
+
+.zf-about-us-e-box {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+.zf-about-us-e {
+	padding: 10px;
+}
+.zf-about-us-e > div {
+	/* border: 1px solid #ccc; */
+	border-radius: 5px;
+	height: 100%;
+	/* background: #f9f6f9; */
+	overflow: hidden;
+	box-shadow: 0 0 10px 0 #00000022;
+	transition: 300ms;
+}
+.zf-about-us-e:hover > div {
+	transform: translateY(-3px);
+	box-shadow: 0 2px 12px 0 #00000033;
+}
+.zf-about-us-e-box .zf-about-us-e-div-1,
+.zf-about-us-e-box .zf-about-us-e-div-2,
+.zf-about-us-e-box .zf-about-us-e-div-3
+{
+	width: calc(100% / 3);
+}
+.zf-about-us-e-box .zf-about-us-e-div-4 > div
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.zf-about-us-e-box .zf-about-us-e-1{
+	display: flex;
+	min-height: 100px;
+	max-height: 180px;
+	overflow: hidden;
+}
+.zf-about-us-e-box .zf-about-us-e-1 img{
+ 	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+
+}
 	
+.zf-about-us-e-box .zf-about-us-e-2 {
+	padding:25px 10px 10px;
+	position: relative;
+}
+
+.zf-about-us-e-box .zf-about-us-e-2 h3{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-width: 60%;
+	margin: 0 auto;
+	padding: 0 10px;
+	transform: translate(-50%, -70%);
+	background-color: #1f3d9dcc;
+	color: #fff;
+	line-height: 26px;
+	font-size: 20px;
+	min-height: 60px;
+	border-radius: 4px;
+	backdrop-filter: blur(2px);
+	box-shadow: 0 0 20px 0 #00000099;
+}
+
+/* e e */
+
+
+
+
+@media (min-width: 1200px) {
+	.zf-about-us-e-box {
+		margin: 0 -15px;
+	}
+	.zf-about-us-e {
+		padding: 15px;
+	}
 }
 
 @media (max-width:992px) {
@@ -7433,6 +7537,69 @@ img {
 	.zf-about-container-c .zf-about-us-c-r {
 		padding: 0;
 		display: block;
+	}
+	
+	
+	.zf-about-us-e-box .zf-about-us-e-div-1,
+	.zf-about-us-e-box .zf-about-us-e-div-2,
+	.zf-about-us-e-box .zf-about-us-e-div-3,
+	.zf-about-us-e-box .zf-about-us-e-div-4
+	{
+		width: 50%;
+	}
+	.zf-about-us-e-box .zf-about-us-e-div-4 > div
+	{
+		display: block;
+	}
+
+}
+@media (min-width:992px) {
+	.zf-about-us-e-box .zf-about-us-e-div-4 > div{
+		border-radius: 0;
+	}
+	
+	.zf-about-us-e-box .zf-about-us-e-div-4 .zf-about-us-e-1{
+		max-height: 180px;
+		width: 32%;
+	}
+	.zf-about-us-e-box .zf-about-us-e-div-4 .zf-about-us-e-2{
+		width: 68%;
+		padding: 0;
+		height: 100%;
+	}
+	.zf-about-us-e-box .zf-about-us-e-div-4 .zf-about-us-e-2 h3{
+		position: static;
+		transform: none;
+		border-radius: 0;
+	}
+	.zf-about-us-e-box .zf-about-us-e-div-4 .zf-about-us-e-2 > span{
+		display: block;
+		padding: 10px;
+	}
+}
+
+@media (min-width:521px) and (max-width:600px) {
+	.zf-about-us-e-box {
+		margin: 0 -5px;
+	}
+	.zf-about-us-e {
+		padding: 5px;
+	}
+}
+
+@media (max-width:520px) {
+	.zf-about-us-e-box .zf-about-us-e-div-1,
+	.zf-about-us-e-box .zf-about-us-e-div-2,
+	.zf-about-us-e-box .zf-about-us-e-div-3,
+	.zf-about-us-e-box .zf-about-us-e-div-4
+	{
+		width: 100%;
+	}
+	.zf-about-us-e-box {
+		margin: 0 -10px;
+	}
+	.zf-about-us-e {
+		padding: 10px;
 	}
 }
 
