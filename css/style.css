@@ -2136,7 +2136,7 @@ About Us Css Style
 }
 
 .zf-none {
-	display: none;
+	display: none!important;
 }
 /*--------------------------------------------------------------
 #0.7  about-section-s2
@@ -7180,10 +7180,39 @@ header .sticky-on {
 }
 
 
+
+.zf-products-section .zf-products-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 80px;
+	position: relative;
+}
+
+.zf-products-top .zf-products-top-left {
+	display: flex;
+	align-items: center;
+	background-color: #1f3d9d66;
+	gap: 1px;
+	padding: 1px;
+}
+
+.zf-products-top .zf-products-top-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translateY(100%);
+	padding: 10px 0;
+}
+.zf-products-top .zf-products-top-left > div {
+	padding: 8px 10px;
+	background-color: #fff;
+}
+
 .zf-products-section .zf-products-list {
 	margin: 20px auto;
 	display: grid;
-	/* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+	/* grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); */
 	gap: 20px;
 }
 
@@ -7197,7 +7226,7 @@ header .sticky-on {
 	overflow: hidden;
 }
 .zf-products-section .zf-products-list a:hover {
-	box-shadow: 0 0 15px 0 #999;
+	box-shadow: 2px 0 15px 0 #666;
 	transform: translateY(-3px);
 }
 .zf-products-section .img-box {
@@ -7221,11 +7250,11 @@ header .sticky-on {
 	opacity: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #1f3d9dcc;
+	background-color: #1f3d9d50;
 	transition: 300ms;
 }
 .zf-products-list a:hover .img-box i {
-	opacity: 1;
+	opacity: 0.5;
 }
 .zf-products-list .zf-pro-disc {
 	height: 143px;
@@ -7266,7 +7295,7 @@ header .sticky-on {
 
 @media (min-width:992px) {
 	.zf-products-section .zf-products-list {
-		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 		gap: 30px;
 	}
 	.zf-houm-about {
