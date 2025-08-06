@@ -1,6 +1,6 @@
 function loadProducts() {
 	let currentPage = 1;
-	const itemsPerPage = 6;
+	let itemsPerPage = 6;
 	let productsData = [];
 	let productsDataLength;
 	let totalPages;
@@ -14,6 +14,7 @@ function loadProducts() {
 		currentPage = parseInt(params.get('p')) || currentPage;
 		// 加载JSON数据
 		$.getJSON('json/products.json', function(data) {
+			itemsPerPage = (data.itemsPerPage > itemsPerPage) ? data.itemsPerPage : itemsPerPage;  // 如果json设置的pageSize大于“let itemsPerPage = 6”则，等于json的设置
 			productsData = data.data.filter(item => item.use == 1); // 只选择use == 1的
 			productsDataLength = productsData.length;
 			totalPages = Math.ceil(productsDataLength / itemsPerPage);
@@ -62,7 +63,7 @@ function loadProducts() {
 			<a href="products/${product.id}.html" title="${product.title}">
 				<div class="img-box">
 					<img src="${product.img}" alt="${product.title}">
-					<i class="flaticon-zfck-1 center-icon"></i>
+					<i class="flaticon-zfck-1- center-icon"></i>
 				</div>
 				<div class="details zf-pro-disc">
 					<span>0</span>
@@ -76,7 +77,7 @@ function loadProducts() {
 		});
 	}
 
-	function updatePaginationControls( current) {
+	function updatePaginationControls(current) {
 		zfPageCurrent.text(current);
 		zfPageTotal.text(totalPages);
 		$('#page-input').val(current);
