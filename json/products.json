@@ -2,155 +2,132 @@
 	"itemsPerPage": 8,
 	"data": [
 		{
-			"index": 0, "use": 1, "id": "YSB01",
+			"index": 0, "use": 1, "model": "YSB01",
 			"img": "images/products/YSB01/ys/YSB01-Beach-wheelchair-1.jpg",
 			"title": "YSB01 Folding and Reclining Beach Wheelchair",
 			"desc": "Removable backstage, foldable frame, Adjustable leg rests, adjustable backrest, Front and rear balloon wheels, adaptable to various road surfaces"
 		},
 		{
-			"index": 1, "use": 1, "id": "YSE101",
+			"index": 1, "use": 1, "model": "YSE101",
 			"img": "images/products/YSE101/ys/YSE101-Heavy-Duty-Off-Road-Wheelchair-1.jpg",
 			"title": "YSE101 Heavy Duty Controller Power Off Road Wheelchair",
-			"desc": "Car reclining seat, can be upgraded to leather, Battery, motor can be upgraded with customized configuration, Wide tires, front and rear shock absorbers, more comfortable to drive, 200kg load capacity, large-capacity battery, worry-free range"
+			"desc": "Car reclining seat, can be upgraded to leather, Battery, motor can be upgraded with customized configuration, Wmodele tires, front and rear shock absorbers, more comfortable to drive, 200kg load capacity, large-capacity battery, worry-free range"
 		},
 		{
-			"index": 2, "use": 1, "id": "YSE102",
+			"index": 2, "use": 1, "model": "YSE102",
 			"img": "images/products/YSE102/ys/YSE102-High-Speed-Power-Offroad Wheelchair-1.jpg",
 			"title": "YSE102 High Speed Power Offroad Wheelchair",
-			"desc": "Reclining car seat, comfortable switching position, Dual handle operation for high speed driving, Upgradable and customizable motor, battery configuration, Large storage basket, front and rear front shock design, pneumatic wide tires"
+			"desc": "Reclining car seat, comfortable switching position, Dual handle operation for high speed driving, Upgradable and customizable motor, battery configuration, Large storage basket, front and rear front shock design, pneumatic wmodele tires"
 		},
 		{
-			"index": 3, "use": 1, "id": "YSE123",
+			"index": 3, "use": 1, "model": "YSE123",
 			"img": "images/products/YSE123/ys/YSE123-Steel-Folding-1.jpg",
 			"title": "YSE123 Steel Folding Electric Wheelchair",
 			"desc": "Removable foot rest, adjustable armrests, Folds into place in three steps for easy assembly, Manual electric automatic switching, convenient for traveling"
 		},
 		{
-			"index": 4, "use": 1, "id": "YSE130M",
+			"index": 4, "use": 1, "model": "YSE130M",
 			"img": "images/products/YSE130M/ys/YSE130M-Aluminum-Power-Folding-Wheelchair-1.jpg",
 			"title": "YSE130M Aluminum Power Folding Wheelchair",
 			"desc": "All-aluminum frame, fast folding and unfolding, Motor clutch adjustment, switch manual electric mode at any time, Support remote controller, make the control more easily, Steep slope self-braking, safer traveling"
 		},
 		{
-			"index": 5, "use": 1, "id": "YSE149",
+			"index": 5, "use": 1, "model": "YSE149",
 			"img": "images/products/YSE149/ys/YSE149-Smart-Electric-Motorized-Scooter-Wheelchair-1.jpg",
 			"title": "YSE149 Smart Electric Motorized Scooter Wheelchair",
-			"desc": "McNamee front wheel, 360° easy turnaround in place, Flying wing shock absorption system, automotive-grade seat cushion, more comfortable ride, Intelligent controller, fast learning to start, Fully automatic electromagnetic brake, safer parking on steep slopes."
+			"desc": "McNamee front wheel, 360° easy turnaround in place, Flying wing shock absorption system, automotive-grade seat cushion, more comfortable rmodele, Intelligent controller, fast learning to start, Fully automatic electromagnetic brake, safer parking on steep slopes."
 		},
 		{
-			"index": 6, "use": 1, "id": "YSE137",
-			"title": "images/products/YSE137/ys/YSE137-Lightweight-Foldable-Electric-Wheelchair-1.jpg",
+			"index": 6, "use": 1, "model": "YSE137",
 			"img": "images/products/YSE137/ys/YSE137-Lightweight-Foldable-Electric-Wheelchair-1.jpg",
+			"title": "IYASOCARE YSE137 Lightweight Portable Electric Wheelchair - Foldable Design for Easy Transport",
 			"desc": "Global B2B Supplier of Innovative Mobility Solutions, Customizable Specifications, Ultra-Light 18.5kg Aluminum-Carbon Fiber Frame"
 		},
 		{
-			"index": 7, "use": 1, "id": "YSE203",
-			"title": "IYASOCARE YSE203 Foldable Electric Stair Climbing Wheelchair",
+			"index": 7, "use": 1, "model": "YSE203",
 			"img": "images/products/YSE203/ys/YSE203-Foldable-Power-Stair-Climbing-Wheelchair-1.jpg",
+			"title": "IYASOCARE YSE203 Foldable Electric Stair Climbing Wheelchair",
 			"desc": "15 Steps/Min Electric Stair Climber - 500-Step Vertical Traversal, Compact Folding Design for Home & Commercial Mobility"
 		},
 		{
-			"index": 8, "use": 1, "id": "YSE302",
-			"title": "YSE302 All Terrain Offroad Electric Standing and Reclining Wheelchair",
+			"index": 8, "use": 1, "model": "YSE302",
 			"img": "images/products/YSE302/ys/all-terrain-offroad-electric-standing-reclining-wheelchair-1.jpg",
+			"title": "YSE302 All Terrain Offroad Electric Standing and Reclining Wheelchair",
 			"desc": "Advanced Mobility for All Terrains: Electric Wheelchair with Standing & Reclining Features"
 		},
 		{
-			"index": 9, "use": 0, "id": "",
-			"title": "",
+			"index": 9, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 10, "use": 0, "id": "",
-			"title": "",
+			"index": 10, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 11, "use": 0, "id": "",
-			"title": "",
+			"index": 11, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 12, "use": 0, "id": "",
-			"title": "",
+			"index": 12, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 13, "use": 0, "id": "",
-			"title": "",
+			"index": 13, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 14, "use": 0, "id": "",
-			"title": "",
+			"index": 14, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 15, "use": 0, "id": "",
-			"title": "",
+			"index": 15, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 16, "use": 0, "id": "",
-			"title": "",
+			"index": 16, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 17, "use": 0, "id": "",
-			"title": "",
+			"index": 17, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 18, "use": 0, "id": "",
-			"title": "",
+			"index": 18, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 19, "use": 0, "id": "",
-			"title": "",
+			"index": 19, "use": 0, "model": "",
 			"img": "",
+			"title": "",
 			"desc": ""
 		},
 		{
-			"index": 20, "use": 0, "id": "",
-			"title": "",
+			"index": 20, "use": 0, "model": "",
 			"img": "",
-			"desc": ""
-		},
-		{
-			"index": 21, "use": 0, "id": "",
 			"title": "",
-			"img": "",
-			"desc": ""
-		},
-		{
-			"index": 22, "use": 0, "id": "",
-			"title": "",
-			"img": "",
-			"desc": ""
-		},
-		{
-			"index": 23, "use": 0, "id": "",
-			"title": "",
-			"img": "",
-			"desc": ""
-		},
-		{
-			"index": 24, "use": 0, "id": "",
-			"title": "",
-			"img": "",
 			"desc": ""
 		}
+		
 		
 		
 		

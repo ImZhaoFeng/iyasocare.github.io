@@ -7180,13 +7180,13 @@ header .sticky-on {
 }
 
 
-
+.zf-products-section .zf-products-top-box{
+	margin: 0 0 30px;
+}
 .zf-products-section .zf-products-top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 80px;
-	position: relative;
 }
 
 .zf-products-top .zf-products-top-left {
@@ -7197,25 +7197,69 @@ header .sticky-on {
 	padding: 1px;
 }
 
-.zf-products-top .zf-products-top-bottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	transform: translateY(100%);
-	padding: 10px 0;
-}
 .zf-products-top .zf-products-top-left > div {
-	padding: 8px 10px;
+	padding: 5px 10px;
 	background-color: #fff;
+	cursor: pointer;
+}
+.zf-products-top .zf-products-top-left > div:hover{
+	background-color: #1f3d9d;
+	color: #fff;
 }
 
+.zf-products-top-left > .zf-active{
+	background-color: #1f3d9d!important;
+	color: #fff;
+}
+
+.zf-products-section .zf-products-top-bottom {
+	margin: 10px 0;
+}
+.zf-products-section .zf-products-top-bottom > span {
+	color: #1f3d9d;
+}
+
+
+/* 产品搜索 go */
+.zf-products-section .zf-products-top-right {
+	border: 1px solid #1f3d9d;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.zf-products-section .zf-products-top-right .zf-products-top-search {
+	display: flex;
+	height: 30px;
+	
+}
+.zf-products-section .zf-products-top-right .zf-pro-bottom-go {
+	height: 100%;
+	width: 40px;
+	user-select: none;
+}
+.zf-products-section .zf-products-top-right input {
+	padding: 0 0 0 5px;
+	outline: none;
+	border: none;
+}
+.zf-products-section .zf-pro-bottom-go i{
+	font-style: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: #1f3d9d; /*#f22282;*/
+	color: #fff;
+}
+
+
+
+/*products list page*/
 .zf-products-section .zf-products-list {
 	margin: 20px auto;
 	display: grid;
 	/* grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); */
 	gap: 20px;
 }
-
 
 .zf-products-section .zf-products-list a {
 	display: block;
@@ -7226,7 +7270,7 @@ header .sticky-on {
 	overflow: hidden;
 }
 .zf-products-section .zf-products-list a:hover {
-	box-shadow: 2px 0 15px 0 #666;
+	box-shadow: 2px 0 15px 0 #66666699, 0 0 0 1px #1f3d9d66;
 	transform: translateY(-3px);
 }
 .zf-products-section .img-box {

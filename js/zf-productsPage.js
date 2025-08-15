@@ -4,26 +4,83 @@ function loadProducts() {
 	let productsData = [];
 	let productsDataLength;
 	let totalPages;
+	
 	const zfProductsPagesNow = $('#zf-products-pages-now');
 	const zfPageCurrent = zfProductsPagesNow.find('#zf-page-current');
 	const zfPageTotal = zfProductsPagesNow.find('#zf-page-total');
+	
+	
+	// 排序：null 默认，1 型号，2销量
+	let order = null; // null -> all
+	let search = null;
+	let asc_df = true;
+	let asc_1 = true;
+	let asc_2 = true;
+	
+	const zfProTopBox = $('.zf-products-top-box');
+	const proAll = zfProTopBox.find('.zf-products-top-all');
+	const proOrderDf = zfProTopBox.find('.zf-products-top-orderby-default');
+	const proOrder1 = zfProTopBox.find('.zf-products-top-orderby-model');
+	
+	const go = zfProTopBox.find('.zf-pro-bottom-go');
+	const searchInput = zfProTopBox.find('#zf-products-search');
+	const searchTip = zfProTopBox.find('.zf-products-top-bottom');
+	// 搜索：'': all，'content': 过滤
+	
+	
+	
+	
+	
 
-	function init() {
+	function init(o = null, s = null) {
+		
 		// 从URL获取初始页码
 		const params = new URLSearchParams(window.location.search);
 		currentPage = parseInt(params.get('p')) || currentPage;
+		current_o = params.get('o') || order;
+		current_s = params.get('s') || search;
+		o = (o == null) ? current_o  : o;
+		s = (s == null) ? current_s : s;
+		
+		// 从URL获取初始排序参数
+		const newUrl = new URL(window.location.href);
+		newUrl.searchParams.set('p', 1);
+		if (o !== null && o !== '') {newUrl.searchParams.set('o', o);} else {newUrl.searchParams.delete('o');}
+		if (s !== null && s !== '') {newUrl.searchParams.set('s', s);} else {newUrl.searchParams.delete('s');}
+		history.pushState({}, '', newUrl);
+		
 		// 加载JSON数据
 		$.getJSON('json/products.json', function(data) {
 			itemsPerPage = (data.itemsPerPage > itemsPerPage) ? data.itemsPerPage : itemsPerPage;  // 如果json设置的pageSize大于“let itemsPerPage = 6”则，等于json的设置
 			productsData = data.data.filter(item => item.use == 1); // 只选择use == 1的
-			productsDataLength = productsData.length;
-			totalPages = Math.ceil(productsDataLength / itemsPerPage);
-			$('#page-input').attr('max', totalPages);
-			loadPageBegin(currentPage);
+			
+			productsData = (s == null) ? productsData : productsData.filter(item => item.title.toLowerCase().includes(s.toLowerCase()));
+			
+			if (o == null) {
+				productsData.sort((a, b) => asc_df ? a.index - b.index : b.index - a.index);
+			} else if (o == 1) {
+				productsData.sort((a, b) => asc_1 ? a.model.localeCompare(b.model) : b.model.localeCompare(a.model));
+			}
+			proLoad();
+			
+			// let tip = s ? 'Search results:</span> ${s}' + s + 'tt' : '';
+			let tip = s ? `Search results for <span>${s}</span>: <span>${productsDataLength}</span> products found.` : '';
+			searchTip.html(tip);
+			
 		}).fail(function() {
 			$('#zf-products-list').text('Sorry, there is an error with the API loading.');
 		});
 	}
+	
+	function proLoad() {
+		productsDataLength = productsData.length;
+		totalPages = Math.ceil(productsDataLength / itemsPerPage);
+		$('#page-input').attr('max', totalPages);
+		loadPageBegin(currentPage);
+	}
+
+
+
 
 	function loadPage(page) { 
 		if (page <= 0) {
@@ -60,7 +117,7 @@ function loadProducts() {
 
 		products.forEach(product => {
 		  $container.append(`
-			<a href="products/${product.id}.html" title="${product.title}">
+			<a href="products/${product.model}.html" title="${product.title}">
 				<div class="img-box">
 					<img src="${product.img}" alt="${product.title}">
 					<i class="flaticon-zfck-1- center-icon"></i>
@@ -100,9 +157,65 @@ function loadProducts() {
 		
 		
 	}
+	
 
 	// 初始化加载
 	init();
+	// 加载所有产品
+	proAll.click(() => {
+		init('', '');
+	})
+
+	// 搜索
+	// 代码 1
+	go.click(() => {
+		search = searchInput.val();
+		init(null, search);
+		
+	});
+
+	searchInput.keydown((e) => {
+		if (e.key == 'Enter') {
+			search = searchInput.val();
+			init(null, search);
+		}
+	});
+	
+	// 代码 2 可替换代码1
+	// go.add(searchInput).on('click keydown', function(e){
+	// 	if (e.type == 'click' || (e.type == 'keydown' && e.key == 'Enter')) {
+	// 		search = searchInput.val();
+	// 		init(null, search);
+	// 	}
+	// })
+	
+	
+
+	// 排序
+	proOrderDf.click(function(){
+		asc_df = !asc_df; asc_1 = true; asc_2 = true;currentPage = 1;
+		$(this).addClass('zf-active').siblings().removeClass('zf-active');
+		
+		const newUrl = new URL(window.location.href);
+		newUrl.searchParams.delete('o');
+		history.pushState({}, '', newUrl);
+		
+		productsData.sort((a, b) => asc_df ? a.index - b.index : b.index - a.index);
+		proLoad();
+		// loadPage(1);
+	});
+	
+	proOrder1.click(function(){
+		asc_1 = !asc_1; asc_df = true; asc_2 = true; currentPage = 1;
+		$(this).addClass('zf-active').siblings().removeClass('zf-active');
+		
+		const newUrl = new URL(window.location.href);
+		newUrl.searchParams.set('o', 1);
+		history.pushState({}, '', newUrl);
+		
+		productsData.sort((a, b) => asc_1 ? a.model.localeCompare(b.model) : b.model.localeCompare(a.model));
+		proLoad();
+	});
 
 	// 事件绑定
 	$('#first-page').click(() => loadPage(1));
