@@ -35,11 +35,13 @@ function loadProducts() {
 	
 	
 
-	function init(o = null, s = null) {
+	function init(o = null, s = null, p = null) {
 		
 		// 从URL获取初始页码
 		const params = new URLSearchParams(window.location.search);
 		currentPage = parseInt(params.get('p')) || currentPage;
+		currentPage = (p > 0) ? p : currentPage;
+		
 		current_o = params.get('o') || order;
 		current_s = params.get('s') || search;
 		o = (o == null) ? current_o  : o;
@@ -173,14 +175,14 @@ function loadProducts() {
 	// 代码 1
 	go.click(() => {
 		search = searchInput.val();
-		init(null, search);
+		init('', search, 1);
 		
 	});
 
 	searchInput.keydown((e) => {
 		if (e.key == 'Enter') {
 			search = searchInput.val();
-			init(null, search);
+			init('', search, 1);
 		}
 	});
 	
