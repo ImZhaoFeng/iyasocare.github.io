@@ -7202,9 +7202,19 @@ header .sticky-on {
 	background-color: #fff;
 	cursor: pointer;
 }
+
 .zf-products-top .zf-products-top-left > div:hover{
 	background-color: #1f3d9d;
 	color: #fff;
+}
+
+.zf-products-top .zf-products-top-left > .zf-products-top-all {
+	background-color: #1f3d9d11;
+	color: #1f3d9d;
+	text-underline-offset: 3px;
+}
+.zf-products-top .zf-products-top-left > .zf-products-top-all:hover {
+	text-decoration: underline;
 }
 
 .zf-products-top-left > .zf-active{

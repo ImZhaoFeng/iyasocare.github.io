@@ -22,6 +22,9 @@ function loadProducts() {
 	const proOrderDf = zfProTopBox.find('.zf-products-top-orderby-default');
 	const proOrder1 = zfProTopBox.find('.zf-products-top-orderby-model');
 	
+	const proOrderDf_i = proOrderDf.find('i');
+	const proOrder1_i = proOrder1.find('i');
+	
 	const go = zfProTopBox.find('.zf-pro-bottom-go');
 	const searchInput = zfProTopBox.find('#zf-products-search');
 	const searchTip = zfProTopBox.find('.zf-products-top-bottom');
@@ -190,11 +193,17 @@ function loadProducts() {
 	// })
 	
 	
-
+// const proOrderDf_i = proOrderDf.find('i');
+// const proOrder1_i = proOrder1.find('i');
 	// 排序
 	proOrderDf.click(function(){
 		asc_df = !asc_df; asc_1 = true; asc_2 = true;currentPage = 1;
 		$(this).addClass('zf-active').siblings().removeClass('zf-active');
+		
+		addClass = asc_df ? 'flaticon-zforder-asc' : 'flaticon-zforder-desc';
+		removeClass = asc_df ? 'flaticon-zforder-desc' : 'flaticon-zforder-asc';
+		proOrderDf_i.removeClass(removeClass).addClass(addClass);
+		proOrder1_i.removeClass().addClass('flaticon-zforder-df');
 		
 		const newUrl = new URL(window.location.href);
 		newUrl.searchParams.delete('o');
@@ -208,6 +217,11 @@ function loadProducts() {
 	proOrder1.click(function(){
 		asc_1 = !asc_1; asc_df = true; asc_2 = true; currentPage = 1;
 		$(this).addClass('zf-active').siblings().removeClass('zf-active');
+		
+		addClass = asc_df ? 'flaticon-zforder-asc' : 'flaticon-zforder-desc';
+		removeClass = asc_df ? 'flaticon-zforder-desc' : 'flaticon-zforder-asc';
+		proOrder1_i.removeClass(removeClass).addClass(addClass);
+		proOrderDf_i.removeClass().addClass('flaticon-zforder-df');
 		
 		const newUrl = new URL(window.location.href);
 		newUrl.searchParams.set('o', 1);

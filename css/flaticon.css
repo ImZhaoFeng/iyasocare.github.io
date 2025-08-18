@@ -171,3 +171,7 @@
 .flaticon-zferror-1:before { content: "\f188"; }
 .flaticon-zfinfo:before { content: "\f189"; }
 .flaticon-zfinfo-1:before { content: "\f18a"; }
+
+.flaticon-zforder-df:before { content: "\f18b"; }
+.flaticon-zforder-asc:before { content: "\f18c"; }
+.flaticon-zforder-desc:before { content: "\f18d"; }
