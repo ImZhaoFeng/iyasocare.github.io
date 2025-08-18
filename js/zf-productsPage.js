@@ -220,8 +220,8 @@ function loadProducts() {
 		asc_1 = !asc_1; asc_df = true; asc_2 = true; currentPage = 1;
 		$(this).addClass('zf-active').siblings().removeClass('zf-active');
 		
-		addClass = asc_df ? 'flaticon-zforder-asc' : 'flaticon-zforder-desc';
-		removeClass = asc_df ? 'flaticon-zforder-desc' : 'flaticon-zforder-asc';
+		addClass = asc_1 ? 'flaticon-zforder-asc' : 'flaticon-zforder-desc';
+		removeClass = asc_1 ? 'flaticon-zforder-desc' : 'flaticon-zforder-asc';
 		proOrder1_i.removeClass(removeClass).addClass(addClass);
 		proOrderDf_i.removeClass().addClass('flaticon-zforder-df');
 		
