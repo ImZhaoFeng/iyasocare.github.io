@@ -7192,7 +7192,7 @@ header .sticky-on {
 .zf-products-top .zf-products-top-left {
 	display: flex;
 	align-items: center;
-	background-color: #1f3d9d66;
+	background-color: #1f3d9d88;
 	gap: 1px;
 	padding: 1px;
 }
@@ -7204,22 +7204,28 @@ header .sticky-on {
 }
 
 .zf-products-top .zf-products-top-left > div:hover{
-	background-color: #1f3d9d;
+	/* background-color: #1f3d9d; */
+	background-color: #f22282;
 	color: #fff;
 }
 
 .zf-products-top .zf-products-top-left > .zf-products-top-all {
-	background-color: #1f3d9d11;
+	background-color: #1f3d9d00;
 	color: #1f3d9d;
 	text-underline-offset: 3px;
 }
 .zf-products-top .zf-products-top-left > .zf-products-top-all:hover {
 	text-decoration: underline;
+	background-color: #f2228200;
 }
 
 .zf-products-top-left > .zf-active{
 	background-color: #1f3d9d!important;
 	color: #fff;
+}
+
+.zf-products-section {
+	padding-top: 50px;
 }
 
 .zf-products-section .zf-products-top-bottom {
@@ -7257,11 +7263,16 @@ header .sticky-on {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	background-color: #1f3d9d; /*#f22282;*/
+	background-color: #1f3d9d;
+	/* background-color: #f22282; */
 	color: #fff;
 }
-
-
+.zf-products-section .zf-pro-bottom-go:hover i{
+	background-color: #f22282;
+}
+.zf-products-top-right:has(.zf-pro-bottom-go:hover) {
+	border: 1px solid #f22282;
+}
 
 /*products list page*/
 .zf-products-section .zf-products-list {
@@ -7280,7 +7291,7 @@ header .sticky-on {
 	overflow: hidden;
 }
 .zf-products-section .zf-products-list a:hover {
-	box-shadow: 2px 0 15px 0 #66666699, 0 0 0 1px #1f3d9d66;
+	box-shadow: 2px 0 15px 0 #66666666, 0 0 0 1px #1f3d9d55;
 	transform: translateY(-3px);
 }
 .zf-products-section .img-box {

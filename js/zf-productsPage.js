@@ -167,8 +167,11 @@ function loadProducts() {
 	// 初始化加载
 	init();
 	// 加载所有产品
-	proAll.click(() => {
-		init('', '');
+	proAll.click(function() {
+		init('', '', 1);  // 重新渲染
+		$(this).siblings().removeClass('zf-active');
+		proOrderDf_i.removeClass('flaticon-zforder-asc flaticon-zforder-desc');
+		proOrder1_i.removeClass('flaticon-zforder-asc flaticon-zforder-desc');
 	})
 
 	// 搜索
