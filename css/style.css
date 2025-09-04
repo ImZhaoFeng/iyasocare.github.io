@@ -2207,7 +2207,8 @@ About Us Css Style
     padding-left: 0;
   }
 }
-.about-section-s2 .about-content h4 {
+.about-section-s2 .about-content h4,
+.about-section-s2 .about-content h1 {
     font-size: 20px;
     font-weight: normal;
     color: #131e4a;
@@ -7573,12 +7574,12 @@ img {
 	min-height: 100px;
 	max-height: 180px;
 	overflow: hidden;
+	justify-content: center;
 }
 .zf-about-us-e-box .zf-about-us-e-1 img{
  	max-width: 100%;
 	max-height: 100%;
 	object-fit: cover;
-
 }
 	
 .zf-about-us-e-box .zf-about-us-e-2 {
