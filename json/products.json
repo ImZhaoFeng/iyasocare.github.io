@@ -52,8 +52,14 @@
 		{
 			"index": 8, "use": 1, "model": "YSE302",
 			"img": "images/products/YSE302/ys/all-terrain-offroad-electric-standing-reclining-wheelchair-1.jpg",
-			"title": "YSE302 All Terrain Offroad Electric Standing and Reclining Wheelchair",
+			"title": "IYASOCARE YSE204 Lightweight Folding Electric Stair Climbing Wheelchair",
 			"desc": "Advanced Mobility for All Terrains: Electric Wheelchair with Standing & Reclining Features"
+		},
+		{
+			"index": 9, "use": 1, "model": "YSE204",
+			"img": "images/products/YSE204/ys/iyasocare-yse204-portable-stair-climbing-wheelchair-1.jpg",
+			"title": "YSE302 All Terrain Offroad Electric Standing and Reclining Wheelchair",
+			"desc": "IYASOCARE YSE204, a premium lightweight folding electric stair climbing wheelchair designed for B2B. Aluminum alloy frame, 28KG, 15 steps/min climbing speed, ideal for emergency evacuation & multi-floor access.s"
 		},
 		{
 			"index": 9, "use": 0, "model": "",
