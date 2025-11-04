@@ -68,10 +68,10 @@
 			"desc": "Safety-First Design: Climbing lock prevents reverse movement, while backup camera ensures obstacle detection during stair navigation."
 		},
 		{
-			"index": 9, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
+			"index": 9, "use": 1, "model": "YSE208",
+			"img": "images/products/YSE208/ys/Electric-stair-climbing-wheelchair-YSE208-01.jpg",
+			"title": "SE208 Folding Electric Stair Climbing Wheelchair",
+			"desc": "Versatile Stair Climbing Solution for Enhanced Mobility"
 		},
 		{
 			"index": 10, "use": 0, "model": "",
