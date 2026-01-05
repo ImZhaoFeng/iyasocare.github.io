@@ -972,9 +972,9 @@ header {
     background-color: #1f3d9d;
     border-radius: 50%;
     display: none;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
     bottom: 40px;
     position: fixed;
     right: 30px;
@@ -7611,7 +7611,79 @@ img {
 
 /* e e */
 
+/* 右下角悬浮联系开始 */
+.right-bottom-contact {
+	z-index: 998;
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	height: 140px;
+	width: 70px;
+	
+}
 
+.right-bottom-contact:hover {
+	height: 210px;
+	width: 140px;
+}
+
+.right-bottom-contact a, 
+.right-bottom-contact .zf-rb0 {
+	display: flex;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: #1f3d9d;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 80px;
+	right: 10px;
+	transition: 300ms;
+	box-sizing: border-box;
+	border: 1px solid #1f3d9d;
+}
+.right-bottom-contact:hover .zf-rb0{
+	background-color: #fff;
+	color: #1f3d9d;
+}
+.right-bottom-contact i{
+	font-size: 28px;
+	color: #fff;
+}
+.right-bottom-contact a:hover i{
+	font-size: 28px;
+	color: #1f3d9d;
+}
+.right-bottom-contact a:hover{
+	background-color: #fff;
+} 
+
+/* 主开关 */
+.right-bottom-contact:hover .zf-rb0 {
+	bottom: 80px;
+	right: 10px;
+	
+}
+/* 子按钮 */
+.right-bottom-contact:hover .zf-rb1 {
+	bottom: 150px;
+	right: 10px;
+}
+.right-bottom-contact:hover .zf-rb2 {
+	bottom: 132px;
+	right: 62px;
+}
+.right-bottom-contact:hover .zf-rb3 {
+	bottom: 80px;
+	right: 80px;
+}
+.right-bottom-contact:hover .zf-rb4 {
+	bottom: 28px;
+	right: 62px;
+}
+
+/* 右下角悬浮联系开始 */
 
 
 @media (min-width: 1200px) {
@@ -7697,6 +7769,9 @@ img {
 		padding: 10px;
 	}
 }
+
+
+
 
 /*--------------------------------------------------------------
  
