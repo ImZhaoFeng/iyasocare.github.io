@@ -4356,7 +4356,10 @@ Footer Style
 .footer-tags {
     margin-top: 30px;
 }
-
+.footer-tags h3{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 .footer-tags a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #eee;
@@ -4376,6 +4379,41 @@ Footer Style
     background-color: #1f3d9d;
     color: #fff;
 }
+
+/* 页脚新增联系我们开始 */
+.f-zf-contact-h3 {
+	font-size: 30px;
+	margin: 10px 0;
+	color: #1f5fc6;
+	font-weight: 800;
+}
+/* .footer-tags .f-zf-contact-us 太长了*/
+
+.f-zf-contact-us li {
+	font-size: 15px;
+	display: flex;
+	padding: 5px 0 ;
+	align-items: center;
+	border-top: 1px dotted rgba(255, 255, 255, 0.2);
+	color: #ccc;
+	
+}
+.f-zf-contact-us li:first-child{
+	padding: 0;
+	border-top: none;
+}
+.f-zf-contact-us li i{
+	color: #f22282;
+}
+.f-zf-contact-us li .zf-xiahuaxian{
+	font-weight: 100;
+}
+.f-zf-contact-us li .f-zf-left{
+	margin: 0 10px;
+	color: #f22282;
+	font-weight: 900;
+}
+/* 页脚新增联系我们结束 */
 
 
 .footer-menu {
