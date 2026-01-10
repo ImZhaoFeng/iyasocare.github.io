@@ -15,3 +15,5 @@ Disallow: /404
 # products目录禁止的页面
 Disallow: /products/404.html
 Disallow: /products/404
+
+Sitemap: https://www.iyasocare.cc/sitemap.xml
