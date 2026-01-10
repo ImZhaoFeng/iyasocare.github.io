@@ -1,0 +1,32 @@
+User-agent: *
+
+# 根目录禁止访问的页面（两种URL形式）
+Disallow: /blog-details.html
+Disallow: /blog-details
+Disallow: /blog.html
+Disallow: /blog
+Disallow: /faq.html
+Disallow: /faq
+Disallow: /team-details.html
+Disallow: /team-details
+Disallow: /404.html
+Disallow: /404
+
+# footer.html允许访问但不收录（两种URL形式）
+Allow: /footer.html
+Allow: /footer
+
+# products目录规则
+Allow: /products/index.html
+Allow: /products/index
+Allow: /products/right-hot.html
+Allow: /products/right-hot
+Allow: /products/footer.html
+Allow: /products/footer
+
+# products目录禁止的页面
+Disallow: /products/404.html
+Disallow: /products/404
+
+# 最后：允许所有其他页面
+Allow: /
