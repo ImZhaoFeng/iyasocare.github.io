@@ -891,6 +891,9 @@ header {
 	background-size: cover;
 	background-position: center;
 }
+.about-section.faq {
+	border-top: 1px solid #eee;
+}
 /***************************************************
   Owl Nav Style
 ****************************************************/
@@ -5005,6 +5008,66 @@ Banner Style
 .banner-area-250{
 	height: 250px;
 }
+.banner-area.banner-faq {
+	background: url(../images/faq/faq.jpg) center center/cover no-repeat;
+}
+.banner-area.banner-faq:before{
+	background: rgba(31, 61, 157, 0.8);
+}
+.container.faq{
+	padding: 60px 0;
+}
+.container.faq > section {
+	padding: 20px 0;
+}
+.container.faq h1 {
+	color: #f22282;
+}
+.container.faq .subhead{
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+.container.faq .faq-item {
+	padding: 10px 0;
+}
+.container.faq .faq-question {
+	position: relative;
+	color: #1f3d9d;
+	font-weight: 800;
+	font-size: 1.4rem;
+	margin-bottom: 5px;
+}
+.container.faq .faq-question::after{
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #f22282;
+	position: absolute;
+	top: 50%;
+	left: -10px;
+	transform: translate(0, -50%);
+}
+.container.faq .faq-answer{
+	font-size: 1.1rem;
+}
+
+.about-tab.faq{
+	font-size: 1.8rem;
+}
+.about-tab.faq p strong{
+	font-size: 2rem;
+	color: #f22282!important;
+	margin: 20px 0;
+}
+.about-tab.faq p:first-child{
+	margin: 20px 0 35px;
+}
+.about-tab.faq p:last-child{
+	margin: 20px 0 60px;
+}
+
 .zfimg-product-top-ysb01, .zfimg-product-top-YSE102 {
 	background-position: 50% 80%;
 	background-size: cover;
