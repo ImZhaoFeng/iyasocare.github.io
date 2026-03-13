@@ -74,40 +74,28 @@
 			"desc": "Versatile Stair Climbing Solution for Enhanced Mobility"
 		},
 		{
-			"index": 10, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
+			"index": 12, "use": 1, "model": "YSE113",
+			"img": "images/products/YSE113/ys/YSE113-Foldable-Electric-Wheelchair-1.jpg",
+			"title": "YSE113 Foldable Electric Wheelchair – Lightweight & Portable Power Wheelchair",
+			"desc": "Affordable Steel Frame Electric Wheelchair with 20km Range, Dual Motors & CE Certification"
 		},
 		{
-			"index": 11, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
+			"index": 13, "use": 1, "model": "YSE126",
+			"img": "images/products/YSE126/ys/YSE126-Steel-Folding-Electric-Wheelchair-1.jpg",
+			"title": "YSE126 Steel Frame Folding Electric Wheelchair – Factory Direct Wholesale for B2B Partners",
+			"desc": "Reliable 100kg Capacity Power Wheelchair with 15km Range, CE Certified & Customizable for Global Markets"
 		},
 		{
-			"index": 12, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
+			"index": 14, "use": 1, "model": "YSE114",
+			"img": "images/products/YSE114/ys/YSE114-Heavy-Duty-Electric-Wheelchair-1.jpg",
+			"title": "YSE114 Heavy Duty Electric Wheelchair – 300kg Load Capacity with 1000W Powerful Motor",
+			"desc": "Bariatric Electric Wheelchair for Heavy Users, 40-50km Long Range, CE Certified"
 		},
 		{
-			"index": 13, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
-		},
-		{
-			"index": 14, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
-		},
-		{
-			"index": 15, "use": 0, "model": "",
-			"img": "",
-			"title": "",
-			"desc": ""
+			"index": 15, "use": 1, "model": "YSE301",
+			"img": "images/products/YSE301/ys/YSE301-Electric-Standing-Wheelchair-1.jpg",
+			"title": "YSE301 Electric Standing Wheelchair – Power Stand-Up Wheelchair for Rehabilitation & Daily Use",
+			"desc": "45km Range, Height Adjustable 120-182cm, CE Certified"
 		},
 		{
 			"index": 16, "use": 0, "model": "",
